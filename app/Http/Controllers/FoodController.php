@@ -34,7 +34,7 @@ class FoodController extends Controller
 
         $uploaded = Food::uploadImage($image);
 
-        $validated['food_slug'] = Str::slug($request->food_name . uniqid());
+        $validated['food_slug'] = Str::slug($request->food_name);
         $validated['food_image'] = $uploaded;
 
         Food::create($validated);
@@ -67,7 +67,7 @@ class FoodController extends Controller
             $validated['food_image'] = $food->food_image;
         }
 
-        $validated['food_slug'] = Str::slug($request->food_name . uniqid());
+        $validated['food_slug'] = Str::slug($request->food_name);
 
         $food->update($validated);
 
