@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ScanFood extends Model
 {
     use HasFactory;
+
+    protected $guarded = [''];
 }

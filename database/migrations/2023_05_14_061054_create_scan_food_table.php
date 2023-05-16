@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('scan_food', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('food_id');
+            $table->foreignId('food_id')->nullable();
+            $table->string('scan_food_image');
             $table->timestamps();
         });
     }
