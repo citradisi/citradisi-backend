@@ -35,27 +35,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="province_id">Province</label>
-                    <select class="form-control select2" id="province_id" name="province_id" style="width: 100%;">
-                        <option value="">Select Province</option>
-                        @foreach ($provinces as $province)
-                            <option value="{{ $province->id }}" {{ $province->id == $food->province_id ? 'selected' : '' }}>{{ $province->name }}</option>
-                        @endforeach
-                    </select>
-                    @error('province_id') <span class="text-danger"> {{ $message }}</span> @enderror
-                </div>
-                <div class="form-group">
-                    <label for="regency_id">Regency</label>
-                    <select class="form-control" id="regency_id" name="regency_id" style="width: 100%;">
-                        <option value="">Select Regency</option>
-                        @foreach ($food->regencies as $regency)
-                            <option value="{{ $regency->id }}" {{ $regency->id == $food->regency_id ? 'selected' : '' }}>{{ $regency->name }}</option>
-                        @endforeach
-                    </select>
-                    @error('regency_id') <span class="text-danger"> {{ $message }}</span> @enderror
-                </div>
-
-                <div class="form-group">
                   <label for="food_desc">Food Description</label>
                   <textarea name="food_desc" id="food_desc" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_desc }}</textarea>
                   @error('food_desc') <span class="text-danger"> {{ $message }}</span> @enderror

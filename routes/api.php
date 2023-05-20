@@ -30,12 +30,9 @@ Route::prefix('/v1')->group(function () {
         Route::post('/food', 'food_search');
         Route::post('/food/scan', 'food_scan')->middleware('auth:sanctum');
         Route::get('/food/{food_slug}', 'food_slug');
-        Route::get('/regency', 'regency');
-        Route::get('/regency/{regency}', 'regency_id');
     });
 });
 
-Route::post('/fetch-regency', [GeneralController::class, 'fetch_regency']);
 Route::post('/coba', [GeneralController::class, 'coba']);
 
 

@@ -43,14 +43,4 @@ class FoodApiController extends Controller
         ]);
         return ResponseFormater::success($result, 'Result for Scan Image', $request->bearerToken());
     }
-
-    public function regency() {
-        $regencies = Food::select('regency_id')->groupBy('regency_id')->with('regency')->get();
-        return ResponseFormater::success($regencies, 'List All Foods');
-    }
-
-    public function regency_id(Regency $regency) {
-        $foods = Food::where('regency_id', $regency->id)->with('regency')->get();
-        return ResponseFormater::success($foods, 'List Foods in ' . $regency->name .' Regency');
-    }
 }

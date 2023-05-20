@@ -30,8 +30,6 @@
                     <th style="width: 10px">#</th>
                     <th style="width: 15%">Food Image</th>
                     <th>Food Name</th>
-                    <th>Province</th>
-                    <th>Regency</th>
                     <th>Food Description</th>
                     <th>Action</th>
                 </tr>
@@ -46,8 +44,6 @@
                         </a>
                     </td>
                     <td>{{ $food->food_name }}</td>
-                    <td>{{ $food->province->name }}</td>
-                    <td>{{ $food->regency->name }}</td>
                     <td>{{ $food->food_desc }}</td>
                     <td>
                         <a href="{{ route('food.edit', $food->id) }}" class="btn btn-success" title="Edit"><i class="fas fa-edit"></i></a>
@@ -61,8 +57,6 @@
                 <th>#</th>
                 <th>Food Image</th>
                 <th>Food Name</th>
-                <th>Province</th>
-                <th>Regency</th>
                 <th>Food Description</th>
                 <th>Action</th>
                 </tr>

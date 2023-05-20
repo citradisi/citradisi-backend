@@ -14,10 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // php artisan db:seed --class=IndoRegionProvinceSeeder
-        // php artisan db:seed --class=IndoRegionRegencySeeder
         User::factory(13)->create();
-        $this->call(IndoRegionSeeder::class);
         // Food::factory(33)->create();
 
         // \App\Models\User::factory()->create([
