@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('food', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('province_id');
-            $table->foreignId('regency_id');
             $table->string('food_name');
             $table->string('food_slug');
             $table->string('food_image');

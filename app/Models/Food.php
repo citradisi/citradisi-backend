@@ -17,16 +17,4 @@ class Food extends Model
         $tes = $image->storeAs('image', $file_name, 'gcs');
         return 'image/'. $file_name;
     }
-
-    public function province() {
-        return $this->belongsTo(Province::class, 'province_id', 'id');
-    }
-
-    public function regency() {
-        return $this->belongsTo(Regency::class, 'regency_id', 'id');
-    }
-
-    public function regencies() {
-        return $this->hasMany(Regency::class, 'province_id', 'province_id');
-    }
 }

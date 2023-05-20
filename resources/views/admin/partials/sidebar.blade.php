@@ -40,21 +40,28 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
+            <a href="{{ route('scan_food.index') }}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
               <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
+                Scan Food
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('love.index') }}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                Loves Food
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('bookmark.index') }}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                Bookmark Food
+              </p>
+            </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link">

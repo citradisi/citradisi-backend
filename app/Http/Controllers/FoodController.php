@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
-use App\Models\Province;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -11,14 +10,13 @@ use Illuminate\Support\Str;
 class FoodController extends Controller
 {
     public function index() {
-        $foods = Food::with('province', 'regency')->get();
+        $foods = Food::all();
         $disk = Storage::disk('gcs');
         return view('admin.food.index', compact('foods', 'disk'));
     }
 
     public function create() {
-        $provinces = Province::all();
-        return view('admin.food.create', compact('provinces'));
+        return view('admin.food.create');
     }
 
     public function store(Request $request) {
@@ -42,8 +40,7 @@ class FoodController extends Controller
 
     public function edit(Food $food) {
         $disk = Storage::disk('gcs');
-        $provinces = Province::all();
-        return view('admin.food.edit', compact('food', 'disk', 'provinces'));
+        return view('admin.food.edit', compact('food', 'disk'));
     }
 
     public function update(Request $request, Food $food) {

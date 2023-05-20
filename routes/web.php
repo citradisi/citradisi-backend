@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\LoveController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ScanFoodController;
 use Illuminate\Support\Facades\Route;
@@ -36,8 +38,18 @@ Route::prefix('admin')->group(function () {
     });
 
     Route::controller(ScanFoodController::class)->group(function () {
-        Route::get('/scan-food', 'index')->name('scanfood.index');
-        Route::get('/scan-food/delete/{food}', 'destroy')->name('scanfood.destroy');
+        Route::get('/scan-food', 'index')->name('scan_food.index');
+        Route::get('/scan-food/delete/{scan_food}', 'destroy')->name('scan_food.destroy');
+    });
+
+    Route::controller(LoveController::class)->group(function () {
+        Route::get('/love', 'index')->name('love.index');
+        Route::get('/love/delete/{love}', 'destroy')->name('love.destroy');
+    });
+
+    Route::controller(BookmarkController::class)->group(function () {
+        Route::get('/bookmark', 'index')->name('bookmark.index');
+        Route::get('/bookmark/delete/{bookmark}', 'destroy')->name('bookmark.destroy');
     });
 
     Route::controller(UserController::class)->group(function () {

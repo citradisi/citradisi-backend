@@ -12,19 +12,19 @@ use Illuminate\Support\Facades\Auth;
 
 class FoodApiController extends Controller
 {
-    public function food() {
-        $foods = Food::with('province', 'regency')->orderBy('food_name', 'ASC')->get();
+    public function index() {
+        $foods = Food::orderBy('food_name', 'ASC')->get();
         return ResponseFormater::success($foods, 'List All Foods');
     }
 
     public function food_slug($food_slug) {
-        $food = Food::where('food_slug', $food_slug)->with('province', 'regency')->first();
+        $food = Food::where('food_slug', $food_slug)->first();
         return ResponseFormater::success($food, 'Succesfully get ' . $food->food_name . ' food data');
     }
 
     public function food_search(Request $request) {
         $search = $request->search;
-        $foods = Food::where('food_name', 'LIKE', '%' . $search . '%')->with('province', 'regency')->get();
+        $foods = Food::where('food_name', 'LIKE', '%' . $search . '%')->get();
         return ResponseFormater::success($foods, 'Result for ' . $search);
     }
 

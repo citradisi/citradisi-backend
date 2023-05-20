@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('love', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->foreignId('food_id');
+            $table->boolean('love_status');
             $table->timestamps();
         });
     }

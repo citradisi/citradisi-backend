@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\Auth\AuthenticateSanctum;
 use App\Http\Controllers\Api\Auth\RegisteredUserController;
+use App\Http\Controllers\Api\BookmarkApiController;
 use App\Http\Controllers\Api\FoodApiController;
 use App\Http\Controllers\GeneralController;
 use Illuminate\Http\Request;
@@ -25,11 +26,17 @@ Route::prefix('/v1')->group(function () {
         Route::post('/login', [AuthenticateSanctum::class, 'store']);
     });
 
-    Route::controller(FoodApiController::class)->group(function () {
-        Route::get('/food', 'food');
+    Route::middleware('auth:sanctum')->controller(FoodApiController::class)->group(function () {
+        Route::get('/food', 'index');
         Route::post('/food', 'food_search');
-        Route::post('/food/scan', 'food_scan')->middleware('auth:sanctum');
+        Route::post('/food/scan', 'food_scan');
         Route::get('/food/{food_slug}', 'food_slug');
+    });
+
+    Route::middleware('auth:sanctum')->controller(BookmarkApiController::class)->group(function () {
+        Route::get('/bookmark', 'index');
+        Route::post('/bookmark', 'store');
+        Route::delete('/bookmark/{bookmark}', 'destroy');
     });
 });
 
