@@ -36,6 +36,7 @@ Route::prefix('/v1')->group(function () {
 });
 
 Route::post('/fetch-regency', [GeneralController::class, 'fetch_regency']);
+Route::post('/coba', [GeneralController::class, 'coba']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
