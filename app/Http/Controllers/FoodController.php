@@ -22,7 +22,9 @@ class FoodController extends Controller
     public function store(Request $request) {
         $validated = $request->validate([
             'food_name' => 'required',
-            'food_desc' => 'required',
+            'food_category' => 'required',
+            'food_material' => 'required',
+            'food_make' => 'required',
             'food_image' => 'required|file|image',
         ]);
 
@@ -47,7 +49,9 @@ class FoodController extends Controller
         $disk = Storage::disk('gcs');
         $validated = $request->validate([
             'food_name' => 'required',
-            'food_desc' => 'required',
+            'food_category' => 'required',
+            'food_material' => 'required',
+            'food_make' => 'required',
             'food_image' => 'file|image',
         ]);
 

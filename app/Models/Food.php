@@ -17,4 +17,15 @@ class Food extends Model
         $tes = $image->storeAs('image', $file_name, 'gcs');
         return 'image/'. $file_name;
     }
+
+    public static function findWithSlug($food_slug) {
+        $data =  Food::withCount('loves')->where('food_slug', $food_slug)->first();
+        $data['user_love_status'] = Love::where('food_id', $data->id)->where('user_id', auth()->user()->id)->first()->love_status;
+        return $data;
+    }
+
+    public function loves() {
+        // return $this->
+        return $this->hasMany(Love::class, 'food_id', 'id');
+    }
 }

@@ -34,9 +34,21 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="food_desc">Food Description</label>
-                  <textarea name="food_desc" id="food_desc" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ old('food_desc') }}</textarea>
-                  @error('food_desc') <span class="text-danger"> {{ $message }}</span> @enderror
+                  <label for="food_category">Food Category</label>
+                  <input type="text" class="form-control" name="food_category" id="food_category" placeholder="Food Name" value="{{ old('food_category') }}">
+                  @error('food_category') <span class="text-danger"> {{ $message }}</span> @enderror
+                </div>
+
+                <div class="form-group">
+                  <label for="food_material">Food Material</label>
+                  <textarea name="food_material" id="food_material" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ old('food_material') }}</textarea>
+                  @error('food_material') <span class="text-danger"> {{ $message }}</span> @enderror
+                </div>
+
+                <div class="form-group">
+                  <label for="food_make">Food Make</label>
+                  <textarea name="food_make" id="food_make" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ old('food_make') }}</textarea>
+                  @error('food_make') <span class="text-danger"> {{ $message }}</span> @enderror
                 </div>
 
                 <div class="form-group">

@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Arlana',
             'email' => 'aria@gmail.com',
         ]);
-        User::factory(13)->create();
+        User::factory(7)->create();
         // Food::factory(33)->create();
 
     }

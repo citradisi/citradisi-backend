@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('food_name');
             $table->string('food_slug');
             $table->string('food_image');
-            $table->text('food_desc');
+            $table->string('food_category');
+            $table->text('food_material');
+            $table->text('food_make');
             $table->timestamps();
         });
     }
