@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use App\Http\Controllers\API\ResponseFormater;
 use App\Http\Controllers\Controller;
+use App\Models\ResponseFormat;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -35,7 +35,7 @@ class RegisteredUserController extends Controller
             ]);
 
             if($validateUser->fails()){
-                return ResponseFormater::error($validateUser->errors(), 'Validation error', Response::HTTP_UNAUTHORIZED);
+                return ResponseFormat::error($validateUser->errors(), 'Validation error', Response::HTTP_UNAUTHORIZED);
             }
 
             $user = User::create([
@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
 
             $token = $user->createToken("API TOKEN")->plainTextToken;
 
-            return ResponseFormater::success($user, 'User Created Successfully', $token);
+            return ResponseFormat::success($user, 'User Created Successfully', $token);
 
         } catch (\Throwable $th) {
             return response()->json([

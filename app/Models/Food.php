@@ -20,7 +20,7 @@ class Food extends Model
 
     public static function findWithSlug($food_slug) {
         $data =  Food::withCount('loves')->where('food_slug', $food_slug)->first();
-        $data['user_love_status'] = Love::where('food_id', $data->id)->where('user_id', auth()->user()->id)->first()->love_status;
+        $data['user_love_status'] = Love::where('food_id', $data->id)->where('user_id', auth()->user()->id)->first();
         return $data;
     }
 

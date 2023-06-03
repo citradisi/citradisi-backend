@@ -5,7 +5,6 @@ use App\Http\Controllers\Api\Auth\AuthenticateSanctum;
 use App\Http\Controllers\Api\Auth\RegisteredUserController;
 use App\Http\Controllers\Api\BookmarkApiController;
 use App\Http\Controllers\Api\FoodApiController;
-use App\Http\Controllers\GeneralController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,11 +35,9 @@ Route::prefix('/v1')->group(function () {
     Route::middleware('auth:sanctum')->controller(BookmarkApiController::class)->group(function () {
         Route::get('/bookmark', 'index');
         Route::post('/bookmark', 'store');
-        Route::delete('/bookmark/{bookmark}', 'destroy');
+        Route::post('/bookmark/{bookmark}', 'destroy');
     });
 });
-
-Route::post('/coba', [GeneralController::class, 'coba']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

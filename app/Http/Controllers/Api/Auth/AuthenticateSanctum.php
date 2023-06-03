@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use App\Http\Controllers\API\ResponseFormater;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\ResponseFormat;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
@@ -28,7 +28,7 @@ class AuthenticateSanctum extends Controller
             ]);
 
             if($validateUser->fails()){
-                return ResponseFormater::error($validateUser->errors(), 'Validation error', Response::HTTP_UNAUTHORIZED);
+                return ResponseFormat::error($validateUser->errors(), 'Validation error', Response::HTTP_UNAUTHORIZED);
                 // return response()->json([
                 //     'status' => false,
                 //     'message' => 'validation error',
@@ -37,13 +37,13 @@ class AuthenticateSanctum extends Controller
             }
 
             if(!Auth::attempt($request->only(['email', 'password']))){
-                return ResponseFormater::error(false, 'Email atau Password salah!!, silahkan cek kembali!', Response::HTTP_UNAUTHORIZED);
+                return ResponseFormat::error(false, 'Email atau Password salah!!, silahkan cek kembali!', Response::HTTP_UNAUTHORIZED);
             }
 
             $user = User::where('email', $request->email)->first();
             $token = $user->createToken("API TOKEN")->plainTextToken;
 
-            return ResponseFormater::success($user, 'Login Success', $token);
+            return ResponseFormat::success($user, 'Login Success', $token);
             // return response()->json([
             //     'status' => true,
             //     'message' => 'User Logged In Successfully',

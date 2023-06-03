@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\API\ResponseFormater;
 use App\Http\Controllers\Controller;
 use App\Models\Food;
 use App\Models\Regency;
+use App\Models\ResponseFormat;
 use App\Models\ScanFood;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,18 +15,18 @@ class FoodApiController extends Controller
 {
     public function index() {
         $foods = Food::orderBy('food_name', 'ASC')->get();
-        return ResponseFormater::success($foods, 'List All Foods');
+        return ResponseFormat::success($foods, 'List All Foods');
     }
 
     public function food_slug($food_slug) {
         $food = Food::findWithSlug($food_slug);
-        return ResponseFormater::success($food, 'Succesfully get ' . $food->food_name . ' food data');
+        return ResponseFormat::success($food, 'Succesfully get ' . $food->food_name . ' food data');
     }
 
     public function food_search(Request $request) {
         $search = $request->search;
         $foods = Food::where('food_name', 'LIKE', '%' . $search . '%')->get();
-        return ResponseFormater::success($foods, 'Result for ' . $search);
+        return ResponseFormat::success($foods, 'Result for ' . $search);
     }
 
     public function food_scan(Request $request) {
@@ -50,6 +50,6 @@ class FoodApiController extends Controller
             'scan_food_image' => $save_image
         ]);
 
-        return ResponseFormater::success($food, 'Result for Scan Image', $request->bearerToken());
+        return ResponseFormat::success($food, 'Result for Scan Image', $request->bearerToken());
     }
 }
