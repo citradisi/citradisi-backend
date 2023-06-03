@@ -64,6 +64,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('user.index') }}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                User
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>

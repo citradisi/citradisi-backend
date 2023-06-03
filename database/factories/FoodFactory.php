@@ -20,7 +20,6 @@ class FoodFactory extends Factory
             'food_name' => fake()->name(),
             'food_slug' => fake()->name(),
             'food_image' => 'https://picsum.photos/200/100',
-            'food_desc' => fake()->name(),
         ];
     }
 }

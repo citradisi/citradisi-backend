@@ -6,6 +6,7 @@ use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\LoveController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ScanFoodController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin')->group(function () {
+Route::middleware('auth', 'admin')->prefix('admin')->group(function () {
     Route::controller(GeneralController::class)->group(function () {
         Route::get('/', 'index')->name('dashboard');
     });
@@ -54,11 +55,7 @@ Route::prefix('admin')->group(function () {
 
     Route::controller(UserController::class)->group(function () {
         Route::get('/user', 'index')->name('user.index');
-        Route::get('/user/create', 'create')->name('user.create');
-        Route::post('/user/create', 'store');
-        Route::get('/user/edit/{user}', 'edit')->name('user.edit');
-        Route::put('/user/edit/{user}', 'update');
-        Route::get('/user/delete/{user}', 'destroy')->name('user.destroy');
+        Route::get('/user/edit/{user}', 'change')->name('user.change');
     });
 });
 

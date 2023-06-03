@@ -35,22 +35,28 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="food_category">Food Category</label>
-                    <input type="text" class="form-control" name="food_category" id="food_category" placeholder="Food Name" value="{{ $food->food_category }}">
-                    @error('food_category') <span class="text-danger"> {{ $message }}</span> @enderror
-                </div>
+                    <label for="food_material_id">Food Material (Indonesia)</label>
+                    <textarea name="food_material_id" id="food_material_id" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_material_id }}</textarea>
+                    @error('food_material_id') <span class="text-danger"> {{ $message }}</span> @enderror
+                  </div>
 
-                <div class="form-group">
-                    <label for="food_material">Food Material</label>
-                    <textarea name="food_material" id="food_material" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_material }}</textarea>
-                    @error('food_material') <span class="text-danger"> {{ $message }}</span> @enderror
-                </div>
+                  <div class="form-group">
+                    <label for="food_material_en">Food Material (English)</label>
+                    <textarea name="food_material_en" id="food_material_en" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_material_en }}</textarea>
+                    @error('food_material_en') <span class="text-danger"> {{ $message }}</span> @enderror
+                  </div>
 
-                <div class="form-group">
-                    <label for="food_make">Food Make</label>
-                    <textarea name="food_make" id="food_make" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_make }}</textarea>
-                    @error('food_make') <span class="text-danger"> {{ $message }}</span> @enderror
-                </div>
+                  <div class="form-group">
+                    <label for="food_make_id">Food Make (Indonesia)</label>
+                    <textarea name="food_make_id" id="food_make_id" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_make_id }}</textarea>
+                    @error('food_make_id') <span class="text-danger"> {{ $message }}</span> @enderror
+                  </div>
+
+                  <div class="form-group">
+                    <label for="food_make_en">Food Make (English)</label>
+                    <textarea name="food_make_en" id="food_make_en" cols="30" rows="10" class="form-control" placeholder="Food Description">{{ $food->food_make_en }}</textarea>
+                    @error('food_make_en') <span class="text-danger"> {{ $message }}</span> @enderror
+                  </div>
 
                 <div class="form-group">
                     <label for="food_image">Food Image</label>
