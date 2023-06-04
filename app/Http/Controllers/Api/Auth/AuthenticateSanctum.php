@@ -29,11 +29,6 @@ class AuthenticateSanctum extends Controller
 
             if($validateUser->fails()){
                 return ResponseFormat::error($validateUser->errors(), 'Validation error', Response::HTTP_UNAUTHORIZED);
-                // return response()->json([
-                //     'status' => false,
-                //     'message' => 'validation error',
-                //     'errors' => $validateUser->errors()
-                // ], 401);
             }
 
             if(!Auth::attempt($request->only(['email', 'password']))){
@@ -44,11 +39,6 @@ class AuthenticateSanctum extends Controller
             $token = $user->createToken("API TOKEN")->plainTextToken;
 
             return ResponseFormat::success($user, 'Login Success', $token);
-            // return response()->json([
-            //     'status' => true,
-            //     'message' => 'User Logged In Successfully',
-            //     'token' => $user->createToken("API TOKEN")->plainTextToken
-            // ], 200);
 
         } catch (\Throwable $th) {
             return response()->json([
@@ -61,14 +51,14 @@ class AuthenticateSanctum extends Controller
     /**
      * Destroy an authenticated session.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function status(Request $request)
     {
-        Auth::guard('web')->logout();
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return redirect('/');
+        try {
+            if (auth()->user()) {
+                return ResponseFormat::success(auth()->user(), 'Already Logged', $request->bearerToken());
+            }
+            return ResponseFormat::error('Unauthorized', 'user belum login', Response::HTTP_UNAUTHORIZED);
+        } catch (\Throwable $th) {
+            return ResponseFormat::error('Unauthorized', $th->getMessage(), Response::HTTP_UNAUTHORIZED);
+        }
     }
-}

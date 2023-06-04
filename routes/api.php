@@ -24,6 +24,8 @@ Route::prefix('/v1')->group(function () {
     Route::prefix('/auth')->group(function () {
         Route::post('/register', [RegisteredUserController::class, 'store']);
         Route::post('/login', [AuthenticateSanctum::class, 'store']);
+        Route::get('/logout', [AuthenticateSanctum::class, 'logout']);
+        Route::post('/status', [AuthenticateSanctum::class, 'status'])->middleware('auth:sanctum');
     });
 
     Route::middleware('auth:sanctum')->controller(FoodApiController::class)->group(function () {
