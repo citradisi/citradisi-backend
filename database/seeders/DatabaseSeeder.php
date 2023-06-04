@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
         ]);
         User::factory(7)->create();
         Food::factory()->create([
-            'food_name' => 'asinan-jakarta',
+            'food_name' => 'Asinan Jakarta',
             'food_slug' => 'asinan-jakarta',
-            'food_image' => 'image/asinan-jakarta.jpg',
+            'food_image' => 'image/Asinan-jakarta.jpg',
             'food_material_id' => 'buah-buahan segar (seperti nanas, jambu air, kedondong), tauge, kerupuk, bumbu asinan, air asam, gula, garam',
             'food_make_id' => 'Mencampur buah-buahan dengan bumbu asinan, air asam, gula, dan garam, lalu ditambahkan tauge dan kerupuk sebagai pelengkap.',
             'food_material_en' => 'fresh fruits (such as pineapple, guava, kedondong), bean sprouts, crackers, pickling spices, sour water, sugar, salt',
@@ -32,9 +32,9 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'ayam-betutu',
+            'food_name' => 'Ayam Betutu',
             'food_slug' => 'ayam-betutu',
-            'food_image' => 'image/ayam-betutu.jpg',
+            'food_image' => 'image/Ayam-betutu.jpg',
             'food_material_id' => 'ayam, bumbu betutu (seperti bawang merah, bawang putih, kemiri, cabai, jahe, kunyit, terasi, kencur), daun pisang, daun kemangi',
             'food_make_id' => 'Ayam dibumbui dengan bumbu betutu yang dihaluskan, kemudian dibungkus dengan daun pisang, lalu dipanggang atau direbus sampai matang.',
             'food_material_en' => 'chicken, betutu seasoning (such as shallots, garlic, candlenut, chili, ginger, turmeric, shrimp paste, galangal), banana leaves, basil leaves',
@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'ayam-bumbu-rujak',
+            'food_name' => 'Ayam Bumbu Rujak',
             'food_slug' => 'ayam-bumbu-rujak',
             'food_image' => 'image/ayam-bumbu-rujak.jpg',
             'food_material_id' => 'ayam, bumbu rujak (seperti cabai, bawang merah, bawang putih, kemiri, terasi, gula, garam, air asam), minyak goreng',
@@ -54,9 +54,9 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'ayam-goreng-lengkuas',
+            'food_name' => 'Ayam Goreng Lengkuas',
             'food_slug' => 'ayam-goreng-lengkuas',
-            'food_image' => 'image/ayam-goreng-lengkuas.jpg',
+            'food_image' => 'image/ayam-goreng-lengkuas.jpeg',
             'food_material_id' => 'ayam, bumbu lengkuas (seperti lengkuas, bawang merah, bawang putih, cabai, kunyit, ketumbar, garam, gula), minyak goreng',
             'food_make_id' => 'Ayam dibumbui dengan bumbu lengkuas yang dihaluskan, lalu digoreng sampai matang dan berwarna kecokelatan.',
             'food_material_en' => 'chicken, galangal seasoning (such as galangal, shallots, garlic, chili, turmeric, coriander, salt, sugar), cooking oil',
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'bika-ambon',
+            'food_name' => 'Bika Ambon',
             'food_slug' => 'bika-ambon',
             'food_image' => 'image/bika-ambon.jpg',
             'food_material_id' => 'tepung beras, gula, ragi, santan, telur, air daun pandan',
@@ -76,9 +76,9 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'bubur-manado',
+            'food_name' => 'Bubur Manado',
             'food_slug' => 'bubur-manado',
-            'food_image' => 'image/bubur-manado.jpg',
+            'food_image' => 'image/Bubur-Manado.jpg',
             'food_material_id' => 'beras, ikan tuna, cabai, daun bawang, bawang merah, bawang putih, kemiri, jahe, serai, air asam, garam, minyak goreng',
             'food_make_id' => 'Beras direbus bersama dengan ikan tuna dan bumbu-bumbu hingga menjadi bubur, kemudian disajikan dengan taburan daun bawang dan bawang goreng.',
             'food_material_en' => 'rice, tuna, chili, scallion, shallot, garlic, candlenut, ginger, lemongrass, tamarind water, salt, cooking oil',
@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'es-dawet',
+            'food_name' => 'Es Dawet',
             'food_slug' => 'es-dawet',
             'food_image' => 'image/es-dawet.jpg',
             'food_material_id' => 'tepung beras, air pandan, air gula merah, santan, es serut',
@@ -98,7 +98,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'gado-gado',
+            'food_name' => 'Gado Gado',
             'food_slug' => 'gado-gado',
             'food_image' => 'image/gado-gado.jpg',
             'food_material_id' => 'sayuran segar (kubis, taoge, wortel), tahu, tempe, telur, lontong, kerupuk, bumbu kacang (kacang tanah, bawang putih, cabai, gula, garam, air asam), bawang merah goreng',
@@ -109,7 +109,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'gudeg',
+            'food_name' => 'Gudeg',
             'food_slug' => 'gudeg',
             'food_image' => 'image/gudeg.jpg',
             'food_material_id' => 'nangka muda, daging ayam, santan, daun salam, serai, gula merah, kelapa parut, telur rebus',
@@ -120,9 +120,9 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'gulai-ikan-mas',
+            'food_name' => 'Gulai Ikan Mas',
             'food_slug' => 'gulai-ikan-mas',
-            'food_image' => 'image/gulai-ikan-mas.jpg',
+            'food_image' => 'image/gule-ikan-mas.jpg',
             'food_material_id' => 'ikan mas, bumbu gulai (bawang merah, bawang putih, cabai, kunyit, jahe, lengkuas, serai, santan), daun jeruk, daun salam, garam',
             'food_make_id' => 'Merebus ikan mas dengan bumbu gulai hingga ikan matang dan bumbu meresap. Tambahkan daun jeruk, daun salam, dan garam sesuai selera.',
             'food_material_en' => 'carp, gulai spices (shallots, garlic, chili, turmeric, ginger, galangal, lemongrass, coconut milk), lime leaves, bay leaves, salt.',
@@ -131,7 +131,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'kerak-telor',
+            'food_name' => 'Kerak Telor',
             'food_slug' => 'kerak-telor',
             'food_image' => 'image/kerak-telor.jpg',
             'food_material_id' => 'beras ketan, telur ayam, ebi (udang kering), kelapa parut sangrai, bawang merah goreng',
@@ -142,9 +142,9 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'klappertart',
+            'food_name' => 'Klappertart',
             'food_slug' => 'klappertart',
-            'food_image' => 'image/klappertart.jpg',
+            'food_image' => 'image/klapertart.jpg',
             'food_material_id' => 'kelapa parut, susu kental manis, gula, telur, tepung terigu, mentega, vanili, kismis',
             'food_make_id' => 'Mencampurkan kelapa parut, susu kental manis, gula, telur, tepung terigu, mentega, dan vanili untuk membuat adonan klappertart. Adonan kemudian dipanggang dalam oven hingga matang. Setelah itu, ditaburi dengan kismis sebagai hiasan.',
             'food_material_en' => 'grated coconut, sweetened condensed milk, sugar, eggs, flour, butter, vanilla, raisins',
@@ -153,7 +153,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'laksa-bogor',
+            'food_name' => 'Laksa Bogor',
             'food_slug' => 'laksa-bogor',
             'food_image' => 'image/laksa-bogor.jpg',
             'food_material_id' => 'mie laksa, kuah kaldu ayam, tauge, daun bawang, irisan daging ayam/sapi, irisan telur rebus, emping goreng, bawang merah goreng, sambal',
@@ -164,9 +164,9 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'mie-aceh',
+            'food_name' => 'Mie Aceh',
             'food_slug' => 'mie-aceh',
-            'food_image' => 'image/mie-aceh.jpg',
+            'food_image' => 'image/mie-aceh.jpeg',
             'food_material_id' => 'mie telur, daging sapi/ayam, bawang merah, bawang putih, cabai, rempah-rempah, minyak, daun bawang, tomat, seledri, air, garam',
             'food_make_id' => 'Membuat bumbu dengan menumis bawang merah, bawang putih, cabai, dan rempah-rempah. Kemudian ditambahkan daging sapi/ayam yang sudah dipotong-potong. Setelah daging matang, tambahkan air, garam, daun bawang, dan seledri. Rebus hingga mendidih dan sajikan dengan mie telur.',
             'food_material_en' => 'egg noodles, beef/chicken, shallots, garlic, chili, spices, oil, scallions, tomatoes, celery, water, salt',
@@ -175,7 +175,7 @@ class DatabaseSeeder extends Seeder
 
 
         Food::factory()->create([
-            'food_name' => 'nasi-goreng-kampung',
+            'food_name' => 'Nasi Goreng Kampung',
             'food_slug' => 'nasi-goreng-kampung',
             'food_image' => 'image/nasi-goreng-kampung.jpg',
             'food_material_id' => 'nasi, daging ayam atau sapi, udang, telur, bawang merah, bawang putih, cabai merah, kecap manis, kecap asin, garam, minyak sayur',
