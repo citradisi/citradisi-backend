@@ -62,3 +62,4 @@ class AuthenticateSanctum extends Controller
             return ResponseFormat::error('Unauthorized', $th->getMessage(), Response::HTTP_UNAUTHORIZED);
         }
     }
+}
