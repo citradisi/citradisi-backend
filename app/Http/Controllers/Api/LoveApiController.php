@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Bookmark;
 use App\Models\Love;
 use App\Models\ResponseFormat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LoveApiController extends Controller
 {
     public function index() {
-        $user_id = auth()->user()->id;
-        $loves = Love::where('user_id', $user_id)->with('food')->get();
+        $loves = Love::select('food_id', DB::raw("count('love_status') as love_total"))->groupBy('food_id')->with('food')->orderBy('love_total', 'DESC')->get();
+        // dd($loves);
 
         return ResponseFormat::success($loves, 'All Loves User');
     }

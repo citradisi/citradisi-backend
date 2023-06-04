@@ -42,7 +42,7 @@ Route::prefix('/v1')->group(function () {
     });
 
     Route::middleware('auth:sanctum')->controller(LoveApiController::class)->group(function () {
-        Route::get('/love', 'index');
+        Route::get('/loves', 'index');
         Route::post('/love', 'store');
         Route::post('/love/{love}', 'destroy');
     });

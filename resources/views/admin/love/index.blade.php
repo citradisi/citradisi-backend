@@ -28,8 +28,7 @@
                 <tr>
                     <th style="width: 10px">#</th>
                     <th>Food Name</th>
-                    <th>User Name</th>
-                    <th>Action</th>
+                    <th>Love Count</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,10 +36,7 @@
                 <tr>
                     <td>{{ $key + 1 }}</td>
                     <td>{{ $love->food->food_name }}</td>
-                    <td>{{ $love->user->name }}</td>
-                    <td>
-                        <a href="{{ route('love.destroy', $love->id) }}" class="btn btn-danger" title="Delete"><i class="fas fa-trash-alt"></i></a>
-                    </td>
+                    <td>{{ $love->love_total }}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -48,8 +44,7 @@
                 <tr>
                     <th style="width: 10px">#</th>
                     <th>Food Name</th>
-                    <th>User Name</th>
-                    <th>Action</th>
+                    <th>Love Count</th>
                 </tr>
             </tfoot>
           </table>
