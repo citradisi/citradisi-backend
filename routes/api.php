@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\Auth\AuthenticateSanctum;
 use App\Http\Controllers\Api\Auth\RegisteredUserController;
 use App\Http\Controllers\Api\BookmarkApiController;
 use App\Http\Controllers\Api\FoodApiController;
+use App\Http\Controllers\Api\LoveApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,12 @@ Route::prefix('/v1')->group(function () {
         Route::get('/bookmark', 'index');
         Route::post('/bookmark', 'store');
         Route::post('/bookmark/{bookmark}', 'destroy');
+    });
+
+    Route::middleware('auth:sanctum')->controller(LoveApiController::class)->group(function () {
+        Route::get('/love', 'index');
+        Route::post('/love', 'store');
+        Route::post('/love/{love}', 'destroy');
     });
 });
 
