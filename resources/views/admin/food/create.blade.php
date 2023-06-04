@@ -95,30 +95,6 @@
             }
             reader.readAsDataURL(e.target.files['0']);
         })
-        $('#province_id').select2()
-        $('#regency_id').select2();
-        $(document).ready(function() {
-            $('#province_id').on('change', function () {
-                var id_province = this.value;
-                $("#regency_id").html('');
-                $.ajax({
-                    url: "{{url('api/fetch-regency')}}",
-                    type: "POST",
-                    data: {
-                        province_id: id_province,
-                        _token: '{{csrf_token()}}'
-                    },
-                    dataType: 'json',
-                    success: function (result) {
-                        $('#regency_id').html('<option value="">Select Regency</option>');
-                        $.each(result.regency, function (key, value) {
-                            $("#regency_id").append('<option value="' + value
-                                .id + '">' + value.name + '</option>');
-                        });
-                    }
-                });
-            });
-        })
     })
 
 </script>
