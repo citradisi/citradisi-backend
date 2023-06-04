@@ -184,5 +184,85 @@ class DatabaseSeeder extends Seeder
             'food_make_en' => 'Sauté shallots, garlic and red chili in vegetable oil. Add chicken or beef that has been cut into small pieces and shrimp. Once cooked, add rice, sweet soy sauce, soy sauce, and salt. Stir well until the spices are absorbed and the rice is aromatic.'
         ]);
 
+        Food::factory()->create([
+            'food_name' => 'Pempek Palembang',
+            'food_slug' => 'pempek-palembang',
+            'food_image' => 'image/pempek-palembang.jpg',
+            'food_material_id' => 'ikan tenggiri, tepung sagu, telur, air, garam, merica, bawang putih, gula, cuka, air kapur sirih',
+            'food_make_id' => 'Haluskan ikan tenggiri dan campurkan dengan tepung sagu, telur, air, garam, merica, dan bawang putih yang dihaluskan. Bentuk adonan menjadi pempek dan rebus dalam air mendidih hingga matang. Sajikan pempek dengan cuko (saus) yang terbuat dari gula, garam, air, cuka, dan air kapur sirih.',
+            'food_material_en' => 'mackerel, sago flour, egg, water, salt, pepper, garlic, sugar, vinegar, whiting water',
+            'food_make_en' => 'Puree the mackerel and mix with sago flour, egg, water, salt, pepper and crushed garlic. Shape the mixture into pempek and boil in boiling water until cooked. Serve the pempek with cuko (sauce) made from sugar, salt, water, vinegar and whiting water.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Rawon',
+            'food_slug' => 'rawon',
+            'food_image' => 'image/Rawon.jpg',
+            'food_material_id' => 'daging sapi, bawang putih, bawang merah, keluak, serai, lengkuas, daun salam, cabai, kluwek, air asam, garam, minyak',
+            'food_make_id' => 'Tumis bawang putih, bawang merah, serai, lengkuas, dan daun salam dalam minyak hingga harum. Masukkan daging sapi dan air, lalu tambahkan keluak yang sudah dihaluskan. Rebus hingga daging empuk dan kuah mengental. Sajikan rawon dengan nasi, tauge, daun bawang, dan bawang goreng.',
+            'food_material_en' => 'beef, garlic, shallots, keluak, lemongrass, galangal, bay leaves, chili, kluwek, tamarind water, salt, oil',
+            'food_make_en' => 'Sauté garlic, shallots, lemongrass, galangal and bay leaves in oil until fragrant. Add the beef and water, then add the mashed keluak. Simmer until the meat is tender and the sauce thickens. Serve rawon with rice, bean sprouts, spring onions, and fried onions.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Rendang',
+            'food_slug' => 'rendang',
+            'food_image' => 'image/rendang.jpg',
+            'food_material_id' => 'daging sapi, bawang merah, bawang putih, cabai merah, cabai keriting, serai, daun jeruk, daun kunyit, santan, gula merah, garam',
+            'food_make_id' => 'Tumis bawang merah, bawang putih, cabai merah, cabai keriting, serai, daun jeruk, dan daun kunyit hingga harum. Masukkan daging sapi dan santan, lalu masak dengan api kecil hingga daging empuk dan bumbu meresap. Tambahkan gula merah dan garam secukupnya.',
+            'food_material_en' => 'beef, shallots, garlic, red chili, curly chili, lemongrass, lime leaves, turmeric leaves, coconut milk, brown sugar, salt',
+            'food_make_en' => 'Sauté shallots, garlic, red chili, curly chili, lemongrass, lime leaves, and turmeric leaves until fragrant. Add beef and coconut milk, and cook over low heat until beef is tender and spices are absorbed. Add brown sugar and salt to taste.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Rujak Cingur',
+            'food_slug' => 'rujak-cingur',
+            'food_image' => 'image/rujak-cingur.jpg',
+            'food_material_id' => 'cingur (hidung sapi yang direbus), tahu, telur, mentimun, kedondong, nanas, bengkoang, lontong, petis, gula merah, air asam, cabai rawit, garam',
+            'food_make_id' => 'Potong-potong cingur, tahu, telur, mentimun, kedondong, nanas, dan bengkoang sesuai selera. Rebus lontong. Campurkan petis, gula merah, air asam, cabai rawit, dan garam untuk membuat bumbu rujak. Tambahkan semua bahan dan sajikan rujak dengan bumbu yang telah dibuat.',
+            'food_material_en' => "cingur (boiled cow's nose), tofu, egg, cucumber, kedondong, pineapple, bengkoang, lontong, petis, brown sugar, tamarind water, cayenne pepper, salt",
+            'food_make_en' => 'Cut the cingur, tofu, egg, cucumber, kedondong, pineapple, and bengkoang into desired pieces. Boil the rice cake. Combine petis, brown sugar, tamarind water, cayenne pepper, and salt to make the salad seasoning. Add all the ingredients and serve the salad with the seasoning that has been made.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Sate',
+            'food_slug' => 'sate',
+            'food_image' => 'image/sate.jpg',
+            'food_material_id' => 'daging ayam, bumbu marinasi (bawang putih, kecap manis, kecap asin, garam, merica), tusuk sate, minyak untuk menggoreng',
+            'food_make_id' => 'Potong daging ayam menjadi dadu kecil. Marinasi daging ayam dengan bawang putih, kecap manis, kecap asin, garam, dan merica selama beberapa jam. Tusuk daging ayam pada tusuk sate. Panaskan minyak dalam wajan dan goreng sate ayam hingga matang dan berwarna kecokelatan. Sajikan dengan bumbu kacang atau saus sate.',
+            'food_material_en' => 'chicken meat, marinade (garlic, sweet soy sauce, soy sauce, salt, pepper), skewers, oil for frying',
+            'food_make_en' => 'Cut the chicken meat into small cubes. Marinate the chicken meat with garlic, sweet soy sauce, soy sauce, salt, and pepper for a few hours. Skewer the chicken meat on skewers. Heat oil in a wok and fry the chicken skewers until cooked and browned. Serve with peanut sauce or satay sauce.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Soto',
+            'food_slug' => 'soto',
+            'food_image' => 'image/soto.jpg',
+            'food_material_id' => 'daging ayam/sapi, kaldu ayam/sapi, bawang putih, bawang merah, serai, daun jeruk, daun salam, daun bawang, tauge, kentang, telur rebus, soun, air jeruk nipis, garam, merica',
+            'food_make_id' => 'Rebus daging ayam/sapi bersama dengan bawang putih, bawang merah, serai, daun jeruk, daun salam, dan garam hingga daging empuk. Ambil daging, suwir-suwir, dan sisihkan. Saring kaldu, tambahkan garam dan merica sesuai selera. Rebus kembali kaldu bersama tauge, kentang, dan soun. Sajikan soto dengan daging suwir, telur rebus, daun bawang, dan perasan air jeruk nipis.',
+            'food_material_en' => 'chicken/beef meat, chicken/beef broth, garlic, shallots, lemongrass, lime leaves, bay leaves, spring onions, bean sprouts, potatoes, boiled eggs, rice noodles, lime juice, salt, pepper',
+            'food_make_en' => 'Boil the chicken/cow meat along with garlic, shallots, lemongrass, lime leaves, bay leaves, and salt until the meat is tender. Take the meat, shred it, and set aside. Strain the broth, add salt and pepper to taste. Boil the broth again with bean sprouts, potatoes, and rice noodles. Serve soto with shredded meat, boiled egg, spring onion, and a squeeze of lime juice.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Sup Korno',
+            'food_slug' => 'sup-korno',
+            'food_image' => 'image/sup-konro.jpg',
+            'food_material_id' => 'daging korno (seperti tulang iga atau daging sapi lainnya), wortel, kentang, bawang bombay, bawang putih, daun bawang, daun seledri, kaldu ayam/sapi, garam, merica',
+            'food_make_id' => 'Rebus daging korno dalam air hingga empuk. Tambahkan wortel, kentang, bawang bombay, bawang putih, daun bawang, dan daun seledri. Masak hingga sayuran matang. Bumbui dengan garam dan merica sesuai selera. Sajikan sup korno hangat.',
+            'food_material_en' => 'corned beef (such as ribs or other beef), carrots, potatoes, onions, garlic, scallions, celery leaves, chicken/beef stock, salt, pepper',
+            'food_make_en' => 'Boil the corned beef in water until tender. Add carrots, potatoes, onions, garlic, leeks, and celery leaves. Cook until the vegetables are done. Season with salt and pepper to taste. Serve the corno soup warm.'
+        ]);
+
+        Food::factory()->create([
+            'food_name' => 'Tahu Telur',
+            'food_slug' => 'tahu-telur',
+            'food_image' => 'image/tahu-telur.jpg',
+            'food_material_id' => 'tahu, telur, tepung terigu, air, daun bawang, bawang merah, bawang putih, petis, kecap manis, garam, minyak untuk menggoreng',
+            'food_make_id' => 'Haluskan tahu dan campurkan dengan tepung terigu, telur, air, daun bawang, bawang merah, bawang putih, saus tiram, kecap manis, dan garam. Panaskan minyak dalam wajan. Ambil adonan tahu telur, lalu goreng dalam minyak panas hingga matang dan berwarna kecokelatan. Tiriskan dan sajikan tahu telur dengan saus atau sambal pilihan.',
+            'food_material_en' => 'tofu, eggs, flour, water, scallions, shallots, garlic, sweet soy sauce, salt, oil for frying',
+            'food_make_en' => 'Puree the tofu and mix it with flour, egg, water, scallions, shallots, garlic, oyster sauce, soy sauce, and salt. Heat oil in a wok. Take the egg tofu mixture, then fry it in the hot oil until cooked and browned. Drain and serve the egg tofu with your choice of sauce or sambal.'
+        ]);
+
     }
 }
