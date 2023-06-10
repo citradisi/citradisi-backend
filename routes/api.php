@@ -28,7 +28,7 @@ Route::prefix('/v1')->group(function () {
         Route::post('/status', [AuthenticateSanctum::class, 'status'])->middleware('auth:sanctum');
     });
 
-    Route::controller(FoodApiController::class)->group(function () { // middleware('auth:sanctum')
+    Route::middleware('auth:sanctum')->controller(FoodApiController::class)->group(function () {
         Route::get('/food', 'index');
         Route::post('/food', 'food_search');
         Route::post('/food/scan', 'food_scan');
