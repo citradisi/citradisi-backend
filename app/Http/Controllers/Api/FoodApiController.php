@@ -20,7 +20,7 @@ class FoodApiController extends Controller
 
     public function food_slug($food_slug) {
         $food = Food::findWithSlug($food_slug);
-        return ResponseFormat::success($food, 'Succesfully get ' . $food->food_name . ' food data');
+        return ResponseFormat::success($food, 'Succesfully get detail food data');
     }
 
     public function food_search(Request $request) {
