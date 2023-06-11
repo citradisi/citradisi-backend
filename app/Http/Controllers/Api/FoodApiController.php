@@ -37,7 +37,7 @@ class FoodApiController extends Controller
         $image = $request->file('scan_food_image');
         $save_image = Food::uploadImage($image);
 
-        $response = Http::post('https://citradisi-deploy-xgzpxfi4wq-et.a.run.app', [
+        $response = Http::post('https://ml-model-h4ch2i4mpa-et.a.run.app', [
             'scan_food_image' => $save_image,
         ]);
 
