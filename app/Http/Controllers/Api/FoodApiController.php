@@ -25,8 +25,9 @@ class FoodApiController extends Controller
     }
 
     public function food_special() {
-        $foods = ScanFood::select('food_id')->groupBy('food_id')->with('food')->get();
-        return ResponseFormat::success($foods, 'Success');
+        $scan = ScanFood::select('food_id')->groupBy('food_id')->first();
+        $result = Food::find($scan->food_id);
+        return ResponseFormat::success($result, 'Success');
     }
 
     public function food_search(Request $request) {
