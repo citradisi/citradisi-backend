@@ -15,7 +15,7 @@ body:
 }
 ```
 
-response berhasil: 
+response berhasil: <br/>
 ```json
 {
     "meta": {
@@ -34,7 +34,7 @@ response berhasil:
 }
 ```
 
-response error:
+response error: <br/>
 ```json
 {
     "meta": {
@@ -57,7 +57,7 @@ response error:
 ```
 
 
-Login
+Login <br/>
  POST: {{url}}/api/v1/auth/login <br/>
 body:
 ```json
@@ -67,7 +67,7 @@ body:
 }
 ```
 
-response: 
+response: <br/>
 ```json
 {
     "meta": {
@@ -90,7 +90,7 @@ response:
 
 
 Auth Status
- POST: {{url}}/api/v1/auth/status
+ POST: {{url}}/api/v1/auth/status <br/>
  Include Bearer Token
 
 response:
@@ -115,7 +115,7 @@ response:
 ```
 
 Get All Food
- GET: {{url}}/api/v1/food
+ GET: {{url}}/api/v1/food <br/>
 
 response:
 ```json
@@ -156,7 +156,7 @@ response:
 ```
 
 Food Search
- POST: {{url}}/api/v1/food
+ POST: {{url}}/api/v1/food <br/>
 
 body: 
 ```json
@@ -203,7 +203,7 @@ response:
 
 
 Food Detail
- GET: {{url}}/api/v1/food/asinan-jakarta
+ GET: {{url}}/api/v1/food/asinan-jakarta <br/>
  asinan-jakarta --> food_slug
  Include Bearer Token
 
@@ -233,8 +233,8 @@ response:
 }
 ```
 
-Food Scan Image
- POST: {{url}}/api/v1/food/scan
+Food Scan Image <br/>
+ POST: {{url}}/api/v1/food/scan <br/>
  Include Bearer Token
 
 body: 
@@ -269,8 +269,8 @@ response:
 }
 ```
 
-GET Bookmark User
- GET: {{url}}/api/v1/bookmark
+GET Bookmark User <br/>
+ GET: {{url}}/api/v1/bookmark <br/>
  Include Bearer Token
 
 
@@ -328,8 +328,8 @@ response:
 }
 ```
 
-STORE Bookmark User
- POST: {{url}}/api/v1/bookmark
+STORE Bookmark User <br/>
+ POST: {{url}}/api/v1/bookmark <br/>
  Include Bearer Token
 
 body:
@@ -369,8 +369,8 @@ response ketika duplicate:
 }
 ```
 
-delete Bookmark User
- POST: {{url}}/api/v1/bookmark/2
+delete Bookmark User <br/>
+ POST: {{url}}/api/v1/bookmark/2 <br/>
  2 --> id dari bookmark
  Include Bearer Token
 
@@ -388,8 +388,8 @@ response ketika berhasil:
 }
 ```
 
-Most Love
- GET: {{url}}/api/v1/loves
+Most Love <br/>
+ GET: {{url}}/api/v1/loves <br/>
  Include Bearer Token
 
 
@@ -439,8 +439,8 @@ response ketika berhasil:
 }
 ```
 
-STORE Love User
- POST: {{url}}/api/v1/love
+STORE Love User <br/>
+ POST: {{url}}/api/v1/love <br/>
  Include Bearer Token
 
 body:
@@ -481,8 +481,8 @@ response ketika duplicate:
 }
 ```
 
-delete Love User
- POST: {{url}}/api/v1/love/2
+delete Love User <br/>
+ POST: {{url}}/api/v1/love/2 <br/>
  2 --> id dari Love
  Include Bearer Token
 
