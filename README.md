@@ -9,9 +9,9 @@ Register <br/>
 body: 
 ```json
 {
-    "name": "Aria Maulana",
-    "email": "newemail@gmail.com",
-    "password": "password"
+    "name": "Nama",
+    "email": "email@domain.com",
+    "password": "xxxxxxxx"
 }
 ```
 
@@ -24,8 +24,8 @@ response berhasil:
         "message": "User Created Successfully"
     },
     "data": {
-        "name": "Aria Maulana",
-        "email": "ariaaa@agmail.com",
+        "name": "Nama",
+        "email": "email@domain.com",
         "updated_at": "2023-06-10T04:16:55.000000Z",
         "created_at": "2023-06-10T04:16:55.000000Z",
         "id": 11
@@ -62,7 +62,7 @@ Login
 body:
 ```json
 {
-    "email": "aria@gmail.com",
+    "email": "email@domain.com",
     "password": "password"
 }
 ```
