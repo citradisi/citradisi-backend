@@ -33,6 +33,7 @@ Route::prefix('/v1')->group(function () {
         Route::post('/food', 'food_search');
         Route::post('/food/scan', 'food_scan')->middleware('auth:sanctum');
         Route::get('/food/{food_slug}', 'food_slug')->middleware('auth:sanctum');
+        Route::post('/food/special', 'food_special');
     });
 
     Route::middleware('auth:sanctum')->controller(BookmarkApiController::class)->group(function () {

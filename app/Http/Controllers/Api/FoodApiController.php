@@ -9,6 +9,7 @@ use App\Models\ResponseFormat;
 use App\Models\ScanFood;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
 class FoodApiController extends Controller
@@ -21,6 +22,11 @@ class FoodApiController extends Controller
     public function food_slug($food_slug) {
         $food = Food::findWithSlug($food_slug);
         return ResponseFormat::success($food, 'Succesfully get ' . $food->food_name . ' food data');
+    }
+
+    public function food_special() {
+        $foods = ScanFood::select('food_id')->groupBy('food_id')->with('food')->get();
+        return ResponseFormat::success($foods, 'Success');
     }
 
     public function food_search(Request $request) {

@@ -12,7 +12,6 @@ class LoveApiController extends Controller
 {
     public function index() {
         $loves = Love::select('food_id', DB::raw("count('love_status') as love_total"))->groupBy('food_id')->with('food')->orderBy('love_total', 'DESC')->get();
-        // dd($loves);
 
         return ResponseFormat::success($loves, 'All Loves User');
     }
