@@ -16,6 +16,7 @@ body:
 ```
 
 response berhasil: 
+```json
 {
     "meta": {
         "code": 200,
@@ -31,8 +32,10 @@ response berhasil:
     },
     "token": "7|3h5wEzqbWRrviuuiHCSWEC5RxO5sgeeKEPuTuj78"
 }
+```
 
 response error:
+```json
 {
     "meta": {
         "code": 401,
@@ -51,17 +54,21 @@ response error:
         ]
     }
 }
+```
 
 
 Login
- POST: {{url}}/api/v1/auth/login
-body: 
+ POST: {{url}}/api/v1/auth/login <br/>
+body:
+```json
 {
     "email": "aria@gmail.com",
     "password": "password"
 }
+```
 
 response: 
+```json
 {
     "meta": {
         "code": 200,
@@ -79,6 +86,7 @@ response:
     },
     "token": "4|b97zLQ8hNVBu0PvoHbMBMZUDXodUpXbF9ciYAk66"
 }
+```
 
 
 Auth Status
@@ -86,6 +94,7 @@ Auth Status
  Include Bearer Token
 
 response:
+```json
 {
     "meta": {
         "code": 200,
@@ -103,12 +112,13 @@ response:
     },
     "token": "1|Hj3n1HkU4v4xmlQffuukg1GEDvOnZ0BItKEvTurc"
 }
-
+```
 
 Get All Food
  GET: {{url}}/api/v1/food
 
 response:
+```json
 {
     "meta": {
         "code": 200,
@@ -143,12 +153,13 @@ response:
     ],
     "token": null
 }
-
+```
 
 Food Search
  POST: {{url}}/api/v1/food
 
 body: 
+```json
 {
     "search": "ayam"
 }
@@ -188,6 +199,7 @@ response:
     ],
     "token": null
 }
+```
 
 
 Food Detail
@@ -196,6 +208,7 @@ Food Detail
  Include Bearer Token
 
 response:
+```json
 {
     "meta": {
         "code": 200,
@@ -218,13 +231,14 @@ response:
     },
     "token": null
 }
-
+```
 
 Food Scan Image
  POST: {{url}}/api/v1/food/scan
  Include Bearer Token
 
 body: 
+```json
 {
     "scan_food_image": (image file)
 }
@@ -253,7 +267,7 @@ response:
     },
     "token": "9|SgaB5oMZQJbSpJcZiWqRg8x7SEy77m1KhqVccpUo"
 }
-
+```
 
 GET Bookmark User
  GET: {{url}}/api/v1/bookmark
@@ -261,6 +275,7 @@ GET Bookmark User
 
 
 response:
+```json
 {
     "meta": {
         "code": 200,
@@ -311,13 +326,14 @@ response:
     ],
     "token": null
 }
-
+```
 
 STORE Bookmark User
  POST: {{url}}/api/v1/bookmark
  Include Bearer Token
 
 body:
+```json
 {
     "food_id": 3
 }
@@ -339,8 +355,10 @@ response ketika berhasil:
     },
     "token": "9|SgaB5oMZQJbSpJcZiWqRg8x7SEy77m1KhqVccpUo"
 }
+```
 
 response ketika duplicate:
+```json
 {
     "meta": {
         "code": 400,
@@ -349,7 +367,7 @@ response ketika duplicate:
     },
     "data": "Data sudah berada di database bookmark"
 }
-
+```
 
 delete Bookmark User
  POST: {{url}}/api/v1/bookmark/2
@@ -358,6 +376,7 @@ delete Bookmark User
 
 
 response ketika berhasil:
+```json
 {
     "meta": {
         "code": 200,
@@ -367,7 +386,7 @@ response ketika berhasil:
     "data": true,
     "token": null
 }
-
+```
 
 Most Love
  GET: {{url}}/api/v1/loves
@@ -375,6 +394,7 @@ Most Love
 
 
 response ketika berhasil:
+```json
 {
     "meta": {
         "code": 200,
@@ -417,17 +437,20 @@ response ketika berhasil:
     ],
     "token": null
 }
+```
 
 STORE Love User
  POST: {{url}}/api/v1/love
  Include Bearer Token
 
 body:
+```json
 {
     "food_id": 3
 }
-
+```
 response ketika berhasil:
+```json
 {
     "meta": {
         "code": 200,
@@ -444,8 +467,10 @@ response ketika berhasil:
     },
     "token": "9|SgaB5oMZQJbSpJcZiWqRg8x7SEy77m1KhqVccpUo"
 }
+```
 
 response ketika duplicate:
+```json
 {
     "meta": {
         "code": 400,
@@ -454,7 +479,7 @@ response ketika duplicate:
     },
     "data": "Data sudah berada di database love"
 }
-
+```
 
 delete Love User
  POST: {{url}}/api/v1/love/2
@@ -463,6 +488,7 @@ delete Love User
 
 
 response ketika berhasil:
+```json
 {
     "meta": {
         "code": 200,
@@ -472,6 +498,7 @@ response ketika berhasil:
     "data": true,
     "token": null
 }
+```
 
 
 
