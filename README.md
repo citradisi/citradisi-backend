@@ -163,8 +163,10 @@ body:
 {
     "search": "ayam"
 }
+```
 
 response:
+```json
 {
     "meta": {
         "code": 200,
