@@ -244,9 +244,11 @@ body:
 {
     "scan_food_image": (image file)
 }
+```
 
 
 response:
+```json
 {
     "meta": {
         "code": 200,
@@ -339,8 +341,9 @@ body:
 {
     "food_id": 3
 }
-
+```
 response ketika berhasil:
+```json
 {
     "meta": {
         "code": 200,
